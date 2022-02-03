@@ -14,3 +14,10 @@ Route::get("/processos/{processo}", "App\Http\Controllers\ProcessosController@sh
 Route::post("/processos", "App\Http\Controllers\ProcessosController@store");
 Route::patch("/processos/{processo}", "App\Http\Controllers\ProcessosController@update");
 Route::delete("/processos/{processo}", "App\Http\Controllers\ProcessosController@destroy");
+
+//Route::get('/register', 'RegistrationController@create');
+Route::post('/register', 'App\Http\Controllers\RegistrationController@store');
+
+//Route::get('/login', 'App\Http\Controllers\SessionsController@create');
+Route::post('/login', 'App\Http\Controllers\SessionsController@store');
+Route::get('/logout', 'App\Http\Controllers\SessionsController@destroy');
